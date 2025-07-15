@@ -18,9 +18,6 @@ Aplicación web para gestionar tareas de proyectos de forma eficiente y moderna.
 ### 🖥️ Vista principal
 ![Vista principal](img/Imagen.png)
 
-> Asegúrate de subir una imagen real con ese nombre en la carpeta `img/` o cambia el nombre en el README.
-
----
 
 ## 🛠️ Tecnologías utilizadas
 
