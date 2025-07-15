@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif; /* Cambiado a Outfit para un look más minimalista */
+    background: #F0F2F5; /* Color sólido muy claro para un enfoque más minimalista */
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: #FFFFFF; /* Fondo blanco puro */
+    border-radius: 12px; /* Ligeramente menos redondeado */
+    padding: 25px; /* Reducido el padding */
+    margin-bottom: 25px; /* Reducido el margen */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.2rem; /* Tamaño de fuente ligeramente más pequeño */
+    font-weight: 600; /* Outfit tiene pesos diferentes, 600 es bueno para títulos */
+    color: #333; /* Color de texto sólido en lugar de gradiente */
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #666;
+    font-size: 1rem; /* Tamaño de fuente ligeramente más pequeño */
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px; /* Reducido el gap */
+    margin-bottom: 25px;
+}
+
+.sidebar {
+    background: #FFFFFF; /* Fondo blanco puro */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.form-group {
+    margin-bottom: 18px; /* Reducido el margen */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px; /* Reducido el margen */
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px; /* Reducido el padding */
+    border: 1px solid #E0E0E0; /* Borde más fino y claro */
+    border-radius: 8px; /* Menos redondeado */
+    font-size: 14px;
+    transition: all 0.2s ease; /* Transición más rápida */
+    background: #F9F9F9; /* Fondo muy ligeramente gris */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007BFF; /* Un azul más moderno y minimalista para el foco */
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Sombra de foco azul sutil */
+}
+
+.btn {
+    padding: 10px 20px; /* Reducido el padding */
+    border: none;
+    border-radius: 8px; /* Menos redondeado */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #007BFF; /* Azul sólido para el botón primario */
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px); /* Menos desplazamiento */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2); /* Sombra más sutil */
+}
+
+.btn-secondary {
+    background: #E9ECEF; /* Gris claro */
+    color: #555;
+    border: 1px solid #D0D0D0; /* Borde más claro */
+}
+
+.btn-secondary:hover {
+    background: #D8DDE2; /* Gris ligeramente más oscuro */
+    transform: none; /* Sin desplazamiento */
+}
+
+.btn-danger {
+    background: #DC3545; /* Rojo de Font Awesome para "peligro" */
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #C82333; /* Rojo ligeramente más oscuro */
+    transform: translateY(-1px);
+}
+
+.projects-section {
+    background: #FFFFFF; /* Fondo blanco puro */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Reducido el margen */
+}
+
+.section-header h2 {
+    font-size: 1.6rem; /* Tamaño de fuente ligeramente más pequeño */
+    font-weight: 700;
+    color: #333;
+}
+
+.filters {
+    display: flex;
+    gap: 8px; /* Reducido el gap */
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    padding: 6px 14px; /* Reducido el padding */
+    border: 1px solid #E0E0E0;
+    background: #F9F9F9;
+    border-radius: 16px; /* Ligeramente más redondeado para los filtros */
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+}
+
+.filter-btn.active {
+    background: #007BFF; /* Azul sólido para el filtro activo */
+    color: white;
+    border-color: transparent;
+}
+
+.filter-btn:hover:not(.active) {
+    background: #E9ECEF;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Min-width ligeramente más pequeño */
+    gap: 18px; /* Reducido el gap */
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px; /* Reducido el padding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Sombra aún más sutil */
+    transition: all 0.2s ease;
+    border: 1px solid #F0F0F0; /* Borde muy sutil */
+}
+
+.project-card:hover {
+    transform: translateY(-3px); /* Menos desplazamiento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra de hover más sutil */
+    border-color: #007BFF; /* Borde azul suave en hover */
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px; /* Reducido el margen */
+}
+
+.project-title {
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente más pequeño */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.project-description {
+    color: #777; /* Color ligeramente más claro */
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    line-height: 1.4; /* Line height ligeramente más apretado */
+}
+
+.priority-badge {
+    padding: 3px 10px; /* Reducido el padding */
+    border-radius: 16px;
+    font-size: 10px; /* Tamaño de fuente más pequeño */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.priority-high {
+    background: #DC3545; /* Rojo de Font Awesome */
+    color: white;
+}
+
+.priority-medium {
+    background: #FFC107; /* Naranja de Font Awesome */
+    color: #333; /* Texto oscuro para contraste en naranja */
+}
+
+.priority-low {
+    background: #28A745; /* Verde de Font Awesome */
+    color: white;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    color: #777;
+}
+
+.task-count {
+    background: #F0F2F5; /* Fondo más claro */
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.progress-bar {
+    height: 5px; /* Altura más pequeña */
+    background: #E9ECEF; /* Gris claro */
+    border-radius: 2.5px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #007BFF; /* Azul sólido para el progreso */
+    transition: width 0.2s ease;
+}
+
+.project-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fondo de superposición más claro */
+    backdrop-filter: blur(4px); /* Menos blur */
+    display: flex; /* Para centrar el modal */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px; /* Reducido el padding */
+    border-radius: 16px;
+    width: 90%;
+    max-width: 550px; /* Ancho máximo ligeramente más pequeño */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-30px); /* Menos desplazamiento */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* Reducido el margen */
+}
+
+.modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.close {
+    font-size: 26px; /* Tamaño ligeramente más pequeño */
+    font-weight: bold;
+    cursor: pointer;
+    color: #AAA; /* Gris más claro */
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #555;
+}
+
+.task-list {
+    margin-top: 15px; /* Reducido el margen */
+}
+
+.task-item {
+    background: #F9F9F9; /* Fondo más claro */
+    padding: 12px; /* Reducido el padding */
+    border-radius: 10px;
+    margin-bottom: 8px; /* Reducido el margen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    border: 1px solid #EEE; /* Borde sutil */
+}
+
+.task-item:hover {
+    background: #F0F2F5; /* Fondo de hover más claro */
+    transform: translateX(3px); /* Menos desplazamiento */
+}
+
+.task-item.completed {
+    opacity: 0.7; /* Opacidad ligeramente más alta */
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #FFFFFF; /* Fondo blanco puro */
+    border-radius: 12px;
+    padding: 20px; /* Reducido el padding */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Sombra más sutil */
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-number {
+    font-size: 2.3rem; /* Tamaño de fuente ligeramente más pequeño */
+    font-weight: 700;
+    color: #007BFF; /* Azul sólido para los números de estadística */
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    .modal-content {
+        padding: 25px;
+    }
+}
+
+/* Estilos de notificación */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28A745; /* Verde de éxito */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-out forwards;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notification.error {
+    background: #DC3545; /* Rojo de error */
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
